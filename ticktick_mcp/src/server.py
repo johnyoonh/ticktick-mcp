@@ -72,11 +72,8 @@ def initialize_client():
 # Format a task object from TickTick for better display
 def format_task(task: Dict) -> str:
     """Format a task into a human-readable string."""
-    # Start with task ID and title as they're most important for updates
-    formatted = f"Task ID: {task.get('id', 'No ID')}\n"
+    formatted = f"ID: {task.get('id', 'No ID')}\n"
     formatted += f"Title: {task.get('title', 'No title')}\n"
-
-    # Add project ID
     formatted += f"Project ID: {task.get('projectId', 'None')}\n"
 
     # Add dates if available
@@ -90,6 +87,11 @@ def format_task(task: Dict) -> str:
     priority = task.get("priority", 0)
     formatted += f"Priority: {priority_map.get(priority, str(priority))}\n"
 
+    # Add tags if available
+    tags = task.get("tags", [])
+    if tags:
+        formatted += f"Tags: {', '.join(tags)}\n"
+
     # Add status if available
     status = "Completed" if task.get("status") == 2 else "Active"
     formatted += f"Status: {status}\n"
@@ -102,9 +104,9 @@ def format_task(task: Dict) -> str:
     items = task.get("items", [])
     if items:
         formatted += f"\nSubtasks ({len(items)}):\n"
-        for i, item in enumerate(items, 1):
+        for item in items:
             status = "✓" if item.get("status") == 1 else "□"
-            formatted += f"{i}. [{status}] {item.get('title', 'No title')} (ID: {item.get('id', 'No ID')})\n"
+            formatted += f"[{status}] {item.get('title', 'No title')} (ID: {item.get('id', 'No ID')})\n"
 
     return formatted
 
@@ -207,13 +209,11 @@ async def get_project_tasks(project_id: str) -> str:
             return f"No tasks found in project '{project_data.get('project', {}).get('name', project_id)}'."
 
         result = f"Found {len(tasks)} tasks in project '{project_data.get('project', {}).get('name', project_id)}':\n\n"
-        for i, task in enumerate(
-            tasks, 0
-        ):  # Start from 0 to match task numbering convention
-            result += f"Task {i}:\n" + format_task(task) + "\n"
+        for task in tasks:
+            result += "---\n" + format_task(task) + "\n"
 
         # Add usage hint
-        result += "\nTo update a task, use the Task ID shown above with the update_task command."
+        result += "\nTo update a task, use its ID (e.g. 68070f40f543f5995c2bb1b3) with the update_task command."
 
         return result
     except Exception as e:
