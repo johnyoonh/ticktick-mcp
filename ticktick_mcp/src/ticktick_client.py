@@ -246,6 +246,7 @@ class TickTickClient:
         due_date: str = None,
         priority: int = 0,
         is_all_day: bool = False,
+        tags: List[str] = None,
     ) -> Dict:
         """Creates a new task."""
         data = {"title": title, "projectId": project_id}
@@ -260,6 +261,8 @@ class TickTickClient:
             data["priority"] = priority
         if is_all_day is not None:
             data["isAllDay"] = is_all_day
+        if tags:
+            data["tags"] = tags
 
         return self._make_request("POST", "/task", data)
 
@@ -272,6 +275,7 @@ class TickTickClient:
         priority: int = None,
         start_date: str = None,
         due_date: str = None,
+        tags: List[str] = None,
     ) -> Dict:
         """Updates an existing task."""
         data = {"id": task_id, "projectId": project_id}
@@ -286,6 +290,8 @@ class TickTickClient:
             data["startDate"] = start_date
         if due_date:
             data["dueDate"] = due_date
+        if tags is not None:  # Allow empty list to clear tags
+            data["tags"] = tags
 
         return self._make_request("POST", f"/task/{task_id}", data)
 

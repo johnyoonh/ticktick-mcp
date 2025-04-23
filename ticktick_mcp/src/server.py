@@ -72,7 +72,9 @@ def initialize_client():
 # Format a task object from TickTick for better display
 def format_task(task: Dict) -> str:
     """Format a task into a human-readable string."""
-    formatted = f"Title: {task.get('title', 'No title')}\n"
+    # Start with task ID and title as they're most important for updates
+    formatted = f"Task ID: {task.get('id', 'No ID')}\n"
+    formatted += f"Title: {task.get('title', 'No title')}\n"
 
     # Add project ID
     formatted += f"Project ID: {task.get('projectId', 'None')}\n"
@@ -102,7 +104,7 @@ def format_task(task: Dict) -> str:
         formatted += f"\nSubtasks ({len(items)}):\n"
         for i, item in enumerate(items, 1):
             status = "✓" if item.get("status") == 1 else "□"
-            formatted += f"{i}. [{status}] {item.get('title', 'No title')}\n"
+            formatted += f"{i}. [{status}] {item.get('title', 'No title')} (ID: {item.get('id', 'No ID')})\n"
 
     return formatted
 
@@ -205,8 +207,13 @@ async def get_project_tasks(project_id: str) -> str:
             return f"No tasks found in project '{project_data.get('project', {}).get('name', project_id)}'."
 
         result = f"Found {len(tasks)} tasks in project '{project_data.get('project', {}).get('name', project_id)}':\n\n"
-        for i, task in enumerate(tasks, 1):
+        for i, task in enumerate(
+            tasks, 0
+        ):  # Start from 0 to match task numbering convention
             result += f"Task {i}:\n" + format_task(task) + "\n"
+
+        # Add usage hint
+        result += "\nTo update a task, use the Task ID shown above with the update_task command."
 
         return result
     except Exception as e:
@@ -246,6 +253,7 @@ async def create_task(
     start_date: str = None,
     due_date: str = None,
     priority: int = 0,
+    tags: str = None,  # New parameter for tags
 ) -> str:
     """
     Create a new task in TickTick.
@@ -257,6 +265,7 @@ async def create_task(
         start_date: Start date in ISO format YYYY-MM-DDThh:mm:ss+0000 (optional)
         due_date: Due date in ISO format YYYY-MM-DDThh:mm:ss+0000 (optional)
         priority: Priority level (0: None, 1: Low, 3: Medium, 5: High) (optional)
+        tags: Comma-separated list of tags (optional)
     """
     if not ticktick:
         if not initialize_client():
@@ -267,11 +276,15 @@ async def create_task(
         return "Invalid priority. Must be 0 (None), 1 (Low), 3 (Medium), or 5 (High)."
 
     try:
+        # Process tags if provided
+        tag_list = None
+        if tags:
+            tag_list = [tag.strip() for tag in tags.split(",")]
+
         # Validate dates if provided
         for date_str, date_name in [(start_date, "start_date"), (due_date, "due_date")]:
             if date_str:
                 try:
-                    # Try to parse the date to validate it
                     datetime.fromisoformat(date_str.replace("Z", "+00:00"))
                 except ValueError:
                     return f"Invalid {date_name} format. Use ISO format: YYYY-MM-DDThh:mm:ss+0000"
@@ -283,6 +296,7 @@ async def create_task(
             start_date=start_date,
             due_date=due_date,
             priority=priority,
+            tags=tag_list,
         )
 
         if "error" in task:
@@ -303,6 +317,7 @@ async def update_task(
     start_date: str = None,
     due_date: str = None,
     priority: int = None,
+    tags: str = None,  # New parameter for tags
 ) -> str:
     """
     Update an existing task in TickTick.
@@ -315,6 +330,7 @@ async def update_task(
         start_date: New start date in ISO format YYYY-MM-DDThh:mm:ss+0000 (optional)
         due_date: New due date in ISO format YYYY-MM-DDThh:mm:ss+0000 (optional)
         priority: New priority level (0: None, 1: Low, 3: Medium, 5: High) (optional)
+        tags: Comma-separated list of tags (optional)
     """
     if not ticktick:
         if not initialize_client():
@@ -322,14 +338,18 @@ async def update_task(
 
     # Validate priority if provided
     if priority is not None and priority not in [0, 1, 3, 5]:
-        return "Invalid priority. Must be 0 (None), 1 (Low), 3 (Medium), or 5 (High)."
+        return "Invalid priority. Must be 0 (None), 1 (Low), 3: Medium, 5: High)."
 
     try:
+        # Process tags if provided
+        tag_list = None
+        if tags is not None:  # Allow empty string to clear tags
+            tag_list = [tag.strip() for tag in tags.split(",")] if tags else []
+
         # Validate dates if provided
         for date_str, date_name in [(start_date, "start_date"), (due_date, "due_date")]:
             if date_str:
                 try:
-                    # Try to parse the date to validate it
                     datetime.fromisoformat(date_str.replace("Z", "+00:00"))
                 except ValueError:
                     return f"Invalid {date_name} format. Use ISO format: YYYY-MM-DDThh:mm:ss+0000"
@@ -342,6 +362,7 @@ async def update_task(
             start_date=start_date,
             due_date=due_date,
             priority=priority,
+            tags=tag_list,
         )
 
         if "error" in task:
