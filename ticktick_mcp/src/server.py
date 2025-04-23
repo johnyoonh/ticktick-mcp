@@ -47,18 +47,22 @@ def initialize_client():
         ticktick = TickTickClient()
         logger.info("TickTick client initialized successfully")
 
-        # Test API connectivity
-        projects = ticktick.get_projects()
-        if "error" in projects:
-            logger.error(f"Failed to access TickTick API: {projects['error']}")
+        # Test API connectivity with a lightweight call
+        # We'll use the /project endpoint with a non-existent ID to test auth
+        # This will return 404 if auth is valid, or 401 if token is invalid
+        test_response = ticktick._make_request("GET", "/project/test_connection")
+        if isinstance(test_response, dict) and test_response.get(
+            "error", ""
+        ).startswith("401"):
+            logger.error(
+                "Failed to access TickTick API: Invalid or expired access token"
+            )
             logger.error(
                 "Your access token may have expired. Please run 'uv run -m ticktick_mcp.cli auth' to refresh it."
             )
             return False
 
-        logger.info(
-            f"Successfully connected to TickTick API with {len(projects)} projects"
-        )
+        logger.info("Successfully connected to TickTick API")
         return True
     except Exception as e:
         logger.error(f"Failed to initialize TickTick client: {e}")
