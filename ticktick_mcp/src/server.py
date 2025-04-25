@@ -72,6 +72,11 @@ def initialize_client():
 # Format a task object from TickTick for better display
 def format_task(task: Dict) -> str:
     """Format a task into a human-readable string."""
+    # Debug logging
+    logger.info(f"Formatting task with ID: {task.get('id')}")
+    logger.info(f"Full task object: {json.dumps(task, indent=2)}")
+
+    # Start with ID and title as they're most important
     formatted = f"ID: {task.get('id', 'No ID')}\n"
     formatted += f"Title: {task.get('title', 'No title')}\n"
     formatted += f"Project ID: {task.get('projectId', 'None')}\n"
@@ -208,12 +213,15 @@ async def get_project_tasks(project_id: str) -> str:
         if not tasks:
             return f"No tasks found in project '{project_data.get('project', {}).get('name', project_id)}'."
 
+        # Debug logging
+        logger.info(f"Project data structure: {json.dumps(project_data, indent=2)}")
+        for task in tasks:
+            logger.info(f"Task ID: {task.get('id')}")
+            logger.info(f"Full task data: {json.dumps(task, indent=2)}")
+
         result = f"Found {len(tasks)} tasks in project '{project_data.get('project', {}).get('name', project_id)}':\n\n"
         for task in tasks:
             result += "---\n" + format_task(task) + "\n"
-
-        # Add usage hint
-        result += "\nTo update a task, use its ID (e.g. 68070f40f543f5995c2bb1b3) with the update_task command."
 
         return result
     except Exception as e:
