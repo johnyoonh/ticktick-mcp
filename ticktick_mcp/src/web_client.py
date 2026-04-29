@@ -3,6 +3,7 @@ import json
 import requests
 import logging
 import subprocess
+import uuid
 from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
@@ -22,15 +23,14 @@ class TickTickWebClient:
         self.api_url = f"{self.api_protocol}{self.ticktick_server}{self.api_version}"
         self.login_url = f"{self.protocol}{self.ticktick_server}{self.api_version}"
         
-        self.token = None
         self.inbox_id = None
         self.cookie_header = ""
         self.cookies = {}
         
         self.user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-        import uuid
-        device_id = str(uuid.uuid4())
-        self.x_device = f'{{"platform":"web","os":"Mac OS X","device":"Chrome 124.0.0.0","name":"","version":6070,"id":"{device_id}","channel":"website","campaign":"","websocket":""}}'
+        # Using a fixed ID to be consistent across requests for this session
+        self.device_id = "web_random_id"
+        self.x_device = f'{{"platform":"web","os":"Mac OS X","device":"Chrome 124.0.0.0","name":"","version":6070,"id":"{self.device_id}","channel":"website","campaign":"","websocket":""}}'
 
     def _fetch_from_bw(self, field):
         try:
@@ -108,12 +108,23 @@ class TickTickWebClient:
             "Content-Type": "application/json",
             "User-Agent": self.user_agent,
             "x-device": self.x_device,
-            "Cookie": f"t={self.token}; {self.cookie_header}",
+            "Cookie": f"t={self.token}",
             "t": self.token
         }
         
         response = requests.get(url, headers=headers)
         if response.status_code != 200:
+            # If manual token failed, try to login if we have credentials
+            if response.status_code == 401 and self.username and self.password:
+                logger.info("Session token expired or invalid. Attempting login...")
+                if self.login():
+                    # Retry with new token
+                    headers["Cookie"] = f"t={self.token}; {self.cookie_header}"
+                    headers["t"] = self.token
+                    response = requests.get(url, headers=headers)
+                    if response.status_code == 200:
+                        return response.json()
+            
             logger.error(f"Failed to get tasks: {response.status_code}")
             return None
             
