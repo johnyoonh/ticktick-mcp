@@ -12,6 +12,7 @@ class TickTickWebClient:
         load_dotenv()
         self.username = os.getenv("TICKTICK_USERNAME") or self._fetch_from_bw("username")
         self.password = os.getenv("TICKTICK_PASSWORD") or self._fetch_from_bw("password")
+        self.token = os.getenv("TICKTICK_SESSION_TOKEN")
         
         self.ticktick_server = "ticktick.com"
         self.protocol = "https://"
