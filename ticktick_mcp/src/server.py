@@ -26,7 +26,7 @@ db = None
 def initialize_client():
     global ticktick, db
     try:
-        env_path = Path(".env")
+        env_path = Path(__file__).parent.parent.parent / ".env"
         if not env_path.exists():
             logger.error("No .env file found. Please set up authentication.")
             return False

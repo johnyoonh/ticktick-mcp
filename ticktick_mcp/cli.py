@@ -15,7 +15,7 @@ from .authenticate import main as auth_main
 def check_auth_setup() -> bool:
     """Check if authentication is set up properly."""
     # Check if .env file exists with the required credentials
-    env_path = Path('.env')
+    env_path = Path(__file__).parent.parent / '.env'
     if not env_path.exists():
         return False
     

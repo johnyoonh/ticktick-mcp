@@ -17,7 +17,8 @@ class TickTickClient:
     """
 
     def __init__(self):
-        load_dotenv()
+        env_path = Path(__file__).parent.parent.parent / ".env"
+        load_dotenv(env_path)
         self.client_id = os.getenv("TICKTICK_CLIENT_ID")
         self.client_secret = os.getenv("TICKTICK_CLIENT_SECRET")
         self.access_token = os.getenv("TICKTICK_ACCESS_TOKEN")

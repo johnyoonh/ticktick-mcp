@@ -316,7 +316,7 @@ class TickTickAuth:
             return
         
         # Load existing .env file content
-        env_path = Path('.env')
+        env_path = Path(__file__).parent.parent.parent / '.env'
         env_content = {}
         
         if env_path.exists():
