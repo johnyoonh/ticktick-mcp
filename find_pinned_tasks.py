@@ -1,6 +1,6 @@
 import json
 import os
-from ticktick_web_api import TickTickWebClient
+from ticktick_mcp.src.web_client import TickTickWebClient
 from ticktick_mcp.src.ticktick_client import TickTickClient
 
 def main():
@@ -44,8 +44,27 @@ def main():
                 found_tasks.append((title, "Unknown/Batch", task.get("id")))
                 print(f"  --> FOUND: '{title}' (ID: {task.get('id')})")
     else:
-        print("Failed to fetch data using Web API. Please ensure your Bitwarden vault is unlocked or credentials are set.")
-        return
+        print("Failed to fetch data using Web API. Falling back to OpenAPI (this will be slower)...")
+        client = TickTickClient()
+        projects = client.get_projects()
+        if "error" in projects:
+            print(f"Error fetching projects: {projects['error']}")
+            return
+            
+        all_projects = [{'name': 'Inbox', 'id': 'inbox'}] + projects
+        for project in all_projects:
+            if not project.get('closed', False):
+                project_id = project.get('id')
+                print(f"Checking project: {project.get('name')} ({project_id})...")
+                project_data = client.get_project_with_data(project_id)
+                if "error" in project_data:
+                    continue
+                tasks = project_data.get('tasks', [])
+                for task in tasks:
+                    title = task.get('title')
+                    if title in target_titles:
+                        found_tasks.append((title, project.get('name'), task.get('id')))
+                        print(f"  --> FOUND: '{title}' (ID: {task.get('id')})")
 
     print("\n--- Summary ---")
     print(f"Found {len(found_tasks)} out of {len(target_titles)} target tasks.")

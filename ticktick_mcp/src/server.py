@@ -4,28 +4,11 @@ import os
 import logging
 from datetime import datetime, timezone
 from typing import Dict, List, Any, Optional
+from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
 from dotenv import load_dotenv
 
-from .ticktick_client import TickTickClient
-
-# Set up logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-# Create FastMCP server
-mcp = FastMCP("ticktick")
-
-# Create TickTick client
-ticktick = None
-
-
-def initialize_client():
-    global ticktick
-    try:
-        # Check if .env file exists with access token
-from pathlib import Path
 from .ticktick_client import TickTickClient
 from .db import TickTickDB
 
@@ -63,7 +46,7 @@ def initialize_client():
 
         logger.info("TickTick client initialized successfully")
 
-        test_response = ticktick._make_request("GET", "/project/test_connection")
+        test_response = ticktick._make_request("GET", "/project")
         if isinstance(test_response, dict) and test_response.get("error", "").startswith("401"):
             logger.error("Failed to access TickTick API: Invalid or expired access token")
             return False

@@ -178,7 +178,11 @@ class TickTickClient:
             if response.status_code == 204:
                 return {}
 
-            return response.json()
+            try:
+                return response.json()
+            except json.JSONDecodeError:
+                logger.error(f"Failed to parse JSON response from {url}")
+                return {"error": f"Invalid JSON response (Status {response.status_code})"}
         except requests.exceptions.RequestException as e:
             logger.error(f"API request failed: {e}")
             return {"error": str(e)}

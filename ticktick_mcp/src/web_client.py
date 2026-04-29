@@ -10,8 +10,8 @@ logger = logging.getLogger(__name__)
 class TickTickWebClient:
     def __init__(self):
         load_dotenv()
-        self.username = os.getenv("TICKTICK_USERNAME") or self._fetch_from_bwa("username")
-        self.password = os.getenv("TICKTICK_PASSWORD") or self._fetch_from_bwa("password")
+        self.username = os.getenv("TICKTICK_USERNAME") or self._fetch_from_bw("username")
+        self.password = os.getenv("TICKTICK_PASSWORD") or self._fetch_from_bw("password")
         
         self.ticktick_server = "ticktick.com"
         self.protocol = "https://"
@@ -27,22 +27,37 @@ class TickTickWebClient:
         self.cookies = {}
         
         self.user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-        self.x_device = '{"platform":"web","os":"Mac OS X","device":"Chrome 124.0.0.0","name":"","version":6070,"id":"web_random_id","channel":"website","campaign":"","websocket":""}'
+        import uuid
+        device_id = str(uuid.uuid4())
+        self.x_device = f'{{"platform":"web","os":"Mac OS X","device":"Chrome 124.0.0.0","name":"","version":6070,"id":"{device_id}","channel":"website","campaign":"","websocket":""}}'
 
-    def _fetch_from_bwa(self, field):
+    def _fetch_from_bw(self, field):
         try:
-            result = subprocess.run(
-                ["bwa", "get", "TickTick", "--field", field, "--reveal"],
-                capture_output=True,
-                text=True,
-                check=True
-            )
-            return result.stdout.strip()
-        except subprocess.CalledProcessError as e:
-            logger.error(f"Failed to fetch {field} from bwa: {e.stderr.strip()}")
+            # Try specific item name first, then fallback to domain
+            search_terms = ["com.ticktick.task", "ticktick.com"]
+            for term in search_terms:
+                try:
+                    result = subprocess.run(
+                        ["bw", "get", field, term, "--nointeraction"],
+                        capture_output=True,
+                        text=True,
+                        check=True,
+                        timeout=5
+                    )
+                    value = result.stdout.strip()
+                    if value:
+                        return value
+                except subprocess.CalledProcessError:
+                    continue
+            return None
+        except subprocess.TimeoutExpired:
+            logger.error(f"Timeout while fetching {field} from bw. Is it locked?")
             return None
         except FileNotFoundError:
-            logger.error("bwa command not found in PATH")
+            logger.error("bw command not found in PATH")
+            return None
+        except Exception as e:
+            logger.error(f"Unexpected error fetching from bw: {e}")
             return None
 
     def login(self):
@@ -67,6 +82,7 @@ class TickTickWebClient:
         response = requests.post(url, json=payload, headers=headers)
         if response.status_code != 200:
             logger.error(f"Login failed: {response.status_code}")
+            logger.error(f"Response: {response.text}")
             return False
             
         data = response.json()

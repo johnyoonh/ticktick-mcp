@@ -55,13 +55,24 @@ class TickTickDB:
                 (str(checkpoint),)
             )
 
+    def is_sync_ready(self):
+        return self.web_client.username is not None and self.web_client.password is not None
+
     def sync(self):
+        if not self.is_sync_ready():
+            logger.error("Web sync credentials not configured. Skipping sync.")
+            return False
+
         checkpoint = self.get_checkpoint()
         logger.info(f"Syncing from checkpoint {checkpoint}...")
         
-        batch_data = self.web_client.batch_check(checkpoint)
-        if not batch_data:
-            logger.error("Failed to fetch batch data.")
+        try:
+            batch_data = self.web_client.batch_check(checkpoint)
+            if not batch_data:
+                logger.error("Failed to fetch batch data (login might have failed).")
+                return False
+        except Exception as e:
+            logger.error(f"Exception during web sync: {e}")
             return False
 
         new_checkpoint = batch_data.get("checkPoint", checkpoint)
