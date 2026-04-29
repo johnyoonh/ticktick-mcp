@@ -25,136 +25,128 @@ def initialize_client():
     global ticktick
     try:
         # Check if .env file exists with access token
-        from pathlib import Path
+from pathlib import Path
+from .ticktick_client import TickTickClient
+from .db import TickTickDB
 
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Create FastMCP server
+mcp = FastMCP("ticktick")
+
+# Create TickTick clients
+ticktick = None
+db = None
+
+def initialize_client():
+    global ticktick, db
+    try:
         env_path = Path(".env")
         if not env_path.exists():
-            logger.error(
-                "No .env file found. Please run 'uv run -m ticktick_mcp.cli auth' to set up authentication."
-            )
+            logger.error("No .env file found. Please set up authentication.")
             return False
 
-        # Check if we have valid credentials
         with open(env_path, "r") as f:
             content = f.read()
             if "TICKTICK_ACCESS_TOKEN" not in content:
-                logger.error(
-                    "No access token found in .env file. Please run 'uv run -m ticktick_mcp.cli auth' to authenticate."
-                )
+                logger.error("No access token found in .env file.")
                 return False
 
-        # Initialize the client
         ticktick = TickTickClient()
+        try:
+            db = TickTickDB()
+        except Exception as e:
+            logger.error(f"Failed to initialize local DB cache: {e}")
+            logger.error("Make sure TICKTICK_USERNAME and TICKTICK_PASSWORD are set for web sync.")
+
         logger.info("TickTick client initialized successfully")
 
-        # Test API connectivity with a lightweight call
-        # We'll use the /project endpoint with a non-existent ID to test auth
-        # This will return 404 if auth is valid, or 401 if token is invalid
         test_response = ticktick._make_request("GET", "/project/test_connection")
-        if isinstance(test_response, dict) and test_response.get(
-            "error", ""
-        ).startswith("401"):
-            logger.error(
-                "Failed to access TickTick API: Invalid or expired access token"
-            )
-            logger.error(
-                "Your access token may have expired. Please run 'uv run -m ticktick_mcp.cli auth' to refresh it."
-            )
+        if isinstance(test_response, dict) and test_response.get("error", "").startswith("401"):
+            logger.error("Failed to access TickTick API: Invalid or expired access token")
             return False
 
-        logger.info("Successfully connected to TickTick API")
         return True
     except Exception as e:
         logger.error(f"Failed to initialize TickTick client: {e}")
         return False
 
-
-# Format a task object from TickTick for better display
+# Format functions remain the same
 def format_task(task: Dict) -> str:
     """Format a task into a human-readable string."""
-    # Debug logging
-    logger.info(f"Formatting task with ID: {task.get('id')}")
-    logger.info(f"Full task object: {json.dumps(task, indent=2)}")
-
-    # Start with ID and title as they're most important
     formatted = f"ID: {task.get('id', 'No ID')}\n"
     formatted += f"Title: {task.get('title', 'No title')}\n"
     formatted += f"Project ID: {task.get('projectId', 'None')}\n"
 
-    # Add dates if available
     if task.get("startDate"):
         formatted += f"Start Date: {task.get('startDate')}\n"
     if task.get("dueDate"):
         formatted += f"Due Date: {task.get('dueDate')}\n"
 
-    # Add priority if available
     priority_map = {0: "None", 1: "Low", 3: "Medium", 5: "High"}
     priority = task.get("priority", 0)
     formatted += f"Priority: {priority_map.get(priority, str(priority))}\n"
 
-    # Add tags if available
     tags = task.get("tags", [])
     if tags:
         formatted += f"Tags: {', '.join(tags)}\n"
 
-    # Add status if available
     status = "Completed" if task.get("status") == 2 else "Active"
     formatted += f"Status: {status}\n"
 
-    # Add content if available
     if task.get("content"):
         formatted += f"\nContent:\n{task.get('content')}\n"
 
-    # Add subtasks if available
     items = task.get("items", [])
     if items:
         formatted += f"\nSubtasks ({len(items)}):\n"
         for item in items:
-            status = "✓" if item.get("status") == 1 else "□"
-            formatted += f"[{status}] {item.get('title', 'No title')} (ID: {item.get('id', 'No ID')})\n"
+            item_status = "✓" if item.get("status") == 1 else "□"
+            formatted += f"[{item_status}] {item.get('title', 'No title')} (ID: {item.get('id', 'No ID')})\n"
 
     return formatted
 
-
-# Format a project object from TickTick for better display
 def format_project(project: Dict) -> str:
     """Format a project into a human-readable string."""
     formatted = f"Name: {project.get('name', 'No name')}\n"
     formatted += f"ID: {project.get('id', 'No ID')}\n"
 
-    # Add color if available
     if project.get("color"):
         formatted += f"Color: {project.get('color')}\n"
-
-    # Add view mode if available
     if project.get("viewMode"):
         formatted += f"View Mode: {project.get('viewMode')}\n"
-
-    # Add closed status if available
     if "closed" in project:
         formatted += f"Closed: {'Yes' if project.get('closed') else 'No'}\n"
-
-    # Add kind if available
     if project.get("kind"):
         formatted += f"Kind: {project.get('kind')}\n"
 
     return formatted
 
-
 # MCP Tools
-
+@mcp.tool()
+async def sync_cache() -> str:
+    """Force a delta sync with TickTick to update the local SQLite cache."""
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB. Make sure TICKTICK_USERNAME and PASSWORD are set."
+    
+    success = db.sync()
+    if success:
+        return f"Cache synced successfully. Checkpoint: {db.get_checkpoint()}"
+    return "Failed to sync cache."
 
 @mcp.tool()
 async def get_projects() -> str:
     """Get all projects from TickTick."""
-    if not ticktick:
-        if not initialize_client():
-            return "Failed to initialize TickTick client. Please check your API credentials."
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB. Make sure TICKTICK_USERNAME and PASSWORD are set."
 
     try:
-        projects = ticktick.get_projects()
-        if "error" in projects:
-            return f"Error fetching projects: {projects['error']}"
+        db.sync() # Auto sync before read
+        projects = db.get_projects()
 
         if not projects:
             return "No projects found."
@@ -168,58 +160,45 @@ async def get_projects() -> str:
         logger.error(f"Error in get_projects: {e}")
         return f"Error retrieving projects: {str(e)}"
 
-
 @mcp.tool()
 async def get_project(project_id: str) -> str:
     """
     Get details about a specific project.
-
-    Args:
-        project_id: ID of the project
     """
-    if not ticktick:
-        if not initialize_client():
-            return "Failed to initialize TickTick client. Please check your API credentials."
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB."
 
     try:
-        project = ticktick.get_project(project_id)
-        if "error" in project:
-            return f"Error fetching project: {project['error']}"
+        db.sync()
+        project = db.get_project(project_id)
+        if not project:
+            return f"Project {project_id} not found."
 
         return format_project(project)
     except Exception as e:
-        logger.error(f"Error in get_project: {e}")
         return f"Error retrieving project: {str(e)}"
-
 
 @mcp.tool()
 async def get_project_tasks(project_id: str) -> str:
     """
     Get all tasks in a specific project.
-
-    Args:
-        project_id: ID of the project
     """
-    if not ticktick:
-        if not initialize_client():
-            return "Failed to initialize TickTick client. Please check your API credentials."
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB."
 
     try:
-        project_data = ticktick.get_project_with_data(project_id)
-        if "error" in project_data:
-            return f"Error fetching project data: {project_data['error']}"
-
-        tasks = project_data.get("tasks", [])
+        db.sync()
+        tasks = db.get_project_tasks(project_id)
+        
+        project = db.get_project(project_id)
+        p_name = project.get("name") if project else project_id
+        
         if not tasks:
-            return f"No tasks found in project '{project_data.get('project', {}).get('name', project_id)}'."
+            return f"No tasks found in project '{p_name}'."
 
-        # Debug logging
-        logger.info(f"Project data structure: {json.dumps(project_data, indent=2)}")
-        for task in tasks:
-            logger.info(f"Task ID: {task.get('id')}")
-            logger.info(f"Full task data: {json.dumps(task, indent=2)}")
-
-        result = f"Found {len(tasks)} tasks in project '{project_data.get('project', {}).get('name', project_id)}':\n\n"
+        result = f"Found {len(tasks)} tasks in project '{p_name}':\n\n"
         for task in tasks:
             result += "---\n" + format_task(task) + "\n"
 
@@ -230,27 +209,53 @@ async def get_project_tasks(project_id: str) -> str:
 
 
 @mcp.tool()
-async def get_task(project_id: str, task_id: str) -> str:
+async def get_task(task_id: str) -> str:
     """
     Get details about a specific task.
 
     Args:
-        project_id: ID of the project
         task_id: ID of the task
     """
-    if not ticktick:
-        if not initialize_client():
-            return "Failed to initialize TickTick client. Please check your API credentials."
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB."
 
     try:
-        task = ticktick.get_task(project_id, task_id)
-        if "error" in task:
-            return f"Error fetching task: {task['error']}"
+        db.sync()
+        task = db.get_task(task_id)
+        if not task:
+            return f"Task {task_id} not found."
 
         return format_task(task)
     except Exception as e:
         logger.error(f"Error in get_task: {e}")
         return f"Error retrieving task: {str(e)}"
+
+@mcp.tool()
+async def search_tasks(query: str) -> str:
+    """
+    Search tasks by their title using a local database cache.
+
+    Args:
+        query: Substring of the title to search for
+    """
+    if not db:
+        if not initialize_client() or not db:
+            return "Failed to initialize DB."
+
+    try:
+        db.sync()
+        tasks = db.find_tasks_by_title(query)
+        if not tasks:
+            return f"No tasks found matching '{query}'."
+
+        result = f"Found {len(tasks)} tasks matching '{query}':\n\n"
+        for task in tasks:
+            result += "---\n" + format_task(task) + "\n"
+        return result
+    except Exception as e:
+        logger.error(f"Error searching tasks: {e}")
+        return f"Error searching tasks: {str(e)}"
 
 
 @mcp.tool()
