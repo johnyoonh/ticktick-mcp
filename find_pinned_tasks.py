@@ -1,14 +1,9 @@
 import json
+import os
+from ticktick_web_api import TickTickWebClient
 from ticktick_mcp.src.ticktick_client import TickTickClient
 
 def main():
-    client = TickTickClient()
-    projects = client.get_projects()
-    
-    if "error" in projects:
-        print(f"Error fetching projects: {projects['error']}")
-        return
-
     target_titles = [
         "Apply to Jobs",
         "Create calendar that is modifiable across calendar accounts",
@@ -33,25 +28,24 @@ def main():
     
     found_tasks = []
     
-    # Also create a synthetic 'inbox' project
-    all_projects = [{'name': 'Inbox', 'id': 'inbox'}] + projects
+    found_tasks = []
     
-    for project in all_projects:
-        if not project.get('closed', False):
-            project_id = project.get('id')
-            print(f"Checking project: {project.get('name')} ({project_id})...")
-            project_data = client.get_project_with_data(project_id)
-            
-            if "error" in project_data:
-                print(f"  Error fetching data: {project_data['error']}")
-                continue
-                
-            tasks = project_data.get('tasks', [])
-            for task in tasks:
-                title = task.get('title')
-                if title in target_titles:
-                    found_tasks.append((title, project.get('name'), task.get('id')))
-                    print(f"  --> FOUND: '{title}' (ID: {task.get('id')})")
+    print("Using alternative internal Web API to fetch ALL tasks at once...")
+    web_client = TickTickWebClient()
+    batch_data = web_client.batch_check(checkpoint=0)
+    
+    if batch_data and "syncTaskBean" in batch_data:
+        all_tasks = batch_data["syncTaskBean"].get("update", [])
+        print(f"Fetched {len(all_tasks)} total tasks across all projects/trash/completed.")
+        
+        for task in all_tasks:
+            title = task.get("title")
+            if title in target_titles:
+                found_tasks.append((title, "Unknown/Batch", task.get("id")))
+                print(f"  --> FOUND: '{title}' (ID: {task.get('id')})")
+    else:
+        print("Failed to fetch data using Web API. Please ensure your Bitwarden vault is unlocked or credentials are set.")
+        return
 
     print("\n--- Summary ---")
     print(f"Found {len(found_tasks)} out of {len(target_titles)} target tasks.")
@@ -65,4 +59,6 @@ def main():
             print(f" - {t}")
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
+    load_dotenv()
     main()

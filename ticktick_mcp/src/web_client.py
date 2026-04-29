@@ -2,6 +2,7 @@ import os
 import json
 import requests
 import logging
+import subprocess
 from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
@@ -9,8 +10,8 @@ logger = logging.getLogger(__name__)
 class TickTickWebClient:
     def __init__(self):
         load_dotenv()
-        self.username = os.getenv("TICKTICK_USERNAME")
-        self.password = os.getenv("TICKTICK_PASSWORD")
+        self.username = os.getenv("TICKTICK_USERNAME") or self._fetch_from_bwa("username")
+        self.password = os.getenv("TICKTICK_PASSWORD") or self._fetch_from_bwa("password")
         
         self.ticktick_server = "ticktick.com"
         self.protocol = "https://"
@@ -27,6 +28,22 @@ class TickTickWebClient:
         
         self.user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
         self.x_device = '{"platform":"web","os":"Mac OS X","device":"Chrome 124.0.0.0","name":"","version":6070,"id":"web_random_id","channel":"website","campaign":"","websocket":""}'
+
+    def _fetch_from_bwa(self, field):
+        try:
+            result = subprocess.run(
+                ["bwa", "get", "TickTick", "--field", field, "--reveal"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            return result.stdout.strip()
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Failed to fetch {field} from bwa: {e.stderr.strip()}")
+            return None
+        except FileNotFoundError:
+            logger.error("bwa command not found in PATH")
+            return None
 
     def login(self):
         if not self.username or not self.password:
