@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ticktick-mcp": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/john/repos/ticktick-mcp",
+        "-m",
+        "ticktick_mcp.cli",
+        "run"
+      ]
+    }
+  }
+}

@@ -1,0 +1,538 @@
+Project 'Tasks' has 99 tasks.
+  - Robinhood Gold
+  - Gen Z
+  - How to take in complements
+  - Singing headache
+  - Voice
+  - Self-care
+  - 1h videos on conflicts
+  - How do you debug shortcuts on iPhone
+  - DynamoDB
+  - 30m File for the closure of the company
+  - Basketball
+  - concurrency/networking questions
+  - Replica and ZooKeeper
+  - Top 3 things you are looking for in companies?
+  - Andorid tablet real man app
+  - TikTok
+  - Algo
+  - AWS credit
+  - JIRA tickets close opened ones
+  - App Store in Korean
+  - Church
+  - Cleanup
+  - Mutli-thread
+  - IPod
+  - The Committee for Human Rights in North Korea
+  - Master-Slave DB model for scaling reads
+  - Behavior
+  - Data driven changes
+  - Cleanup downloads
+  - This is my first Ultrawide monitor, is there a way to make videos on youtube fit entirely to my monitor. Like wth are those black bars?
+  - Apple System Design
+  - AI/ML shareout
+  - How did the schema change?
+  - Scribd subscription
+  - Amazon Leadership
+  - System Design
+  - Bloomberg
+  - Microsoft Todo, Apple Music on Alexa
+  - Bloomberg
+  - Screws for the kneeling desk
+  - SVD ALS sparse matrix (5h)
+  - Asking for Vacation in September
+  - Amazon Leadership Review
+  - Bonvoy Gold status
+  - scala refund
+  - Search not start with
+  - Trading back Echo dot for Echo show (and how good is it right next to bed?)
+  - Consistent engagement routing to model version
+  - Salary Negotiation
+  - Try to see if we can move the cleanup deadline
+  - Salary Negotiation Videos
+  - nginx & reverse proxy
+  - Binary Search
+  - Google startup program
+  - Xgboost
+  - Feature Engineering
+  - OpenAPI
+  - Hadoop MapReduce
+  - NJ vs NYC
+  - Summarize block interview
+  - Cleaning service subscription
+  - Aws startup discount
+  - API Design
+  - Get back to Amazon
+  - Workplace Accomodation
+  - Reinforcement Learning
+  - Schema Designs
+  - Summarize Facebook Interviews
+  - Facebook Leetcode
+  - ML: feature imputing, cold-start problem, feed-back loop, how to rank quickly, choosing which users to prioritize
+  - Chrome hangout video chat enhancement on Microsoft Edge?
+  - Finishing the purchase
+  - Internet reimbursement
+  - NYC Rental
+  - Databrick Academy
+  - Leetcode
+  - Other references
+  - System Design
+  - Facebook Coding Questions
+  - Knowledge Distallation
+  - Donation to dads related church
+  - Top Facebook System Design Interview Questions
+  - Rivkmath: Data Science Concepts
+  - expert proficiency pipeline
+  - 마일모아 부모님 돌보는 것
+  - Youtube Recommendation System
+  - Onboarding doc for MLE
+  - Email regarding BPP
+  - O'reilly Designing Machine Learning Systems by Chip Huyen
+  - figure out expenses on citi card and migrating over
+  - How to create Anki decks with images
+  - Code Review
+  - Machine Learning Design
+  - Internet reimbursement
+  - Anki Cheatsheet
+  - Stanford students disappoint
+  - Adavanced System Design
+  - Silicon valley Equity
+  - Google interview recap
+Project 'Fashion' has 0 tasks.
+Project 'Intuit later' has 0 tasks.
+Project 'New York' has 10 tasks.
+  - Rent Controlled?
+  - Cancel Internet
+  - OMNY
+  - Bicycle
+  - Sell Ovation Guitar
+  - Sell Desk & Chiar
+  - Sell Dining table
+  - Sell Robot Vacuum
+  - Return Trash Cans
+  - Sell Lights
+Project 'Reimburse/Returns' has 0 tasks.
+Project 'Tildawatch' has 12 tasks.
+  - Recommendation not working
+  - Script for the introduction video Narration
+  - Setup the staging server for login check
+  - Search 500 error in elasticsearch
+  - Upgrading from djangorestframework-jwt to drf-jwt
+  - FFMpeg
+  - CodePush Schedule to react-native-ytdl
+  - Further Header Optimization
+  - Deploying Minilm
+  - Search genre and topic categorization
+  - Analytics
+  - Contents scheduling
+Project 'Waiting On' has 0 tasks.
+Project 'Worship' has 1 tasks.
+  - Guitar Leading Improvements
+Project 'Schedule' has 0 tasks.
+Project 'Algorithms' has 8 tasks.
+  - Lists
+  - 20221221 Union-Find
+  - 20221221 Topological Sort
+  - Backtracking
+  - Sliding Window
+  - Bitwise Manipulation
+  - Dynamic Programming
+  - Subsets
+Project '🔬Research' has 2 tasks.
+  - [anytype — the everything app](https://anytype.io/) [t/🔬Research.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%ACResearch.md)
+  - 10 World-Class Philosophers Who Defend Christianity
+Project 'Natasha' has 38 tasks.
+  - What is considered "taking advantage of another person" in a relationship => so far she met good people, but she know how to cut those bad people her lives
+  - Plastic surgery?
+  - Password and privacy?
+  - Are you still using dating app to chat with other people? => no
+  - How do you differentiate liking vs loving? => she feels more pain from loved ones. Takes time to be commited to a loved relationship
+  - Sharing of more photos
+  - Pictures of EDM or party
+  - Have you lied to me before? The Vegas Trip
+  - Do you feel comfortable with me joining you to Virginia trip in February? => not yet
+  - Relationship with mother => very good, friendly
+  - Any trauma => gaslighting
+  - How did relationships shape you? 4 relationships so far
+  - Politics => Moderate, leaning on left
+  - car, a couch, shoes? => couch
+  - Grandparents
+  - have you faced challenges in your life? How did you overcome them?
+  - Raising children to be conservative? => It is okay as long the parent is more opinionated on the topic. She is more agreeable
+  - Cheating? Worse physical < emotional
+  - What are some things you gave up for God? => not much?
+  - Angry fight => silence
+  - Sex frequency => more than once a week
+  - Have you ever had a crush => no
+  - When pregnant?? => no
+  - Debt. Yes, but how much? quiet a bit, she has no positive net worth
+  - Any medicine
+  - How serious are you about this relationship? => serious
+  - Why not wedding? Is it something that your parents would enjoy attending?
+  - Exes relationships still? No, blocked
+  - Would you take care of shopping and investing on my behalf?
+  - Did you end up not meeting your friend in SF? => meeting at Stanford
+  - Sex, positions? => try to limit to traditional, with a slight spicy
+  - Prenup => okay, but will be a bit concerned/sad
+  - How do you call the courtship quit? => when there is no future
+  - Sex without condoms after marriage => okay
+  - Sex when upset => no
+  - Blowjob when feeling tired? => Maybe?
+  - Fear of God. How do you know have it? => not leaving church or giving up on faith, which is the greatest sin
+  - Fun
+Project 'Arlington' has 8 tasks.
+  - Car: Uship
+  - Desk
+  - Cloths
+  - Shoes
+  - Drawers
+  - Golf Clubs
+  - Ship cloths
+  - Guitars
+Project '🏵Plano' has 8 tasks.
+  - August 11-13: Decide whether to attend the church retreat based on your progress with the move and your job interviews.
+  - August 2-3: Pack your belongings for shipping. Depending on the moving company, it might take a few days to a week to ship your items.
+  - July 17-21: Schedule your LASIK enhancement surgery. The earliest possible date for the surgery should be August 1.
+  - July 12-16: Schedule your job interviews. Also, begin researching and contacting moving and car shipping companies to understand timelines and set tentative dates based on your planned move.
+  - August 4-7: Fly to Dallas for your planned visit and start staying at your uncle's place. If possible, sign the lease for the new apartment during this time.
+  - Plans
+  - Approvals
+  - Intuit Relocation
+Project 'Sell' has 12 tasks.
+  - Shoes
+  - Guitars
+  - Monitors
+  - Hair Cutter
+  - Dish Rack
+  - Libre
+  - Soap Dispenser
+  - Trash Can
+  - Monito
+  - Hair Cutter
+  - Dishes and Rack
+  - Echo Dot
+Project 'Intuit' has 0 tasks.
+Project 'Inbox-2023' has 0 tasks.
+Project 'Siri' has 0 tasks.
+Project 'yunjung' has 7 tasks.
+  - Plastic surgery?
+  - have you faced challenges in your life? How did you overcome them?
+  - Password and privacy?
+  - Sharing of more photos
+  - Pictures of EDM or party
+  - Have you lied to me before? The Vegas Trip
+  - Blowjob when feeling tired? => Maybe?
+Project 'Tasks-old2' has 0 tasks.
+Project 'automation-old' has 5 tasks.
+  - Block google image
+  - backup kakaotalk and images
+  - [Raycast - Supercharged productivity](https://www.raycast.com/)
+  - OneTab Options
+  - Curtains
+Project 'Tasks-old' has 0 tasks.
+Project '🦐Cap1' has 13 tasks.
+  - Confluence [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - 30m CloudDoctor [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Cyber Logging [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Testing 1-2-3: API [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Sample Payload [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - yihyan.yoon@captialone.com still lingering (Help desk) => Power Up [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Llama guard integration [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - API [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Lambda lab [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - DLAI - [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Colang 2.0 [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - EKS [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+  - Trulens (Improve for future reference) [ticktick/🦐Cap1.md](obsidian://open?vault=wiki&file=ticktick/%F0%9F%A6%90Cap1.md)
+Project '🤝interviews' has 34 tasks.
+  - 30 Light review — Papers, notes, summaries, mental refresh
+  - 31 Rest + reset — mental clarity, sleep, hydration
+  - 19 Deep dive — Cross-Modal Error Detection (methods, datasets, limits)
+  - 22 Case study — Hallucination detection pipeline (design + metrics)
+  - 18 Light reading — Rawls et al. arXiv search results (skim for context)
+  - 9 ML fundamentals — Evaluation metrics (BLEU, ROUGE, BERTScore, toxicity)
+  - 26 Narrative building — STAR stories (safety incident, eval pipeline, RAG)
+  - 20 Deep dive — Label Error Detection (correction pipeline, benchmarks)
+  - 11 LLM safety — Taxonomies, jailbreak classes, red-teaming patterns
+  - 29 Technical polish — Review diagrams, talk tracks, system design flows
+  - 24 Light reading — Shape Up (skim appetite, shaping, risk)
+  - 16 System design — Evaluation pipelines (LLM-as-judge, CoT alignment)
+  - 28 Technical polish — SQL + Python warmup, debugging patterns
+  - 25 Shape Up — Appetite vs scope, shaping work, betting cycles
+  - 23 Case study — Multi-policy guardrail system (enterprise constraints)
+  - 5 Light reading — Refining Input Guardrails (skim contributions + limitations)
+  - 13 Light reading — Label Error Detection (skim modular framework)
+  - 2 SQL — Window functions (ROW_NUMBER, RANK, LAG/LEAD, running totals)
+  - 3 SQL — Subqueries, correlated subqueries, CTE transformations
+  - 4 SQL — Interview-style problems (Top N per group, tricky filters)
+  - 15 System design — RAG architectures (indexing, embeddings, retrieval)
+  - 17 Guardrails — Compare GRAID, DynaGuard, Input Guardrails (synthesis)
+  - 8 ML fundamentals — Core concepts (bias/variance, embeddings, tokenization)
+  - 1 SQL — Joins, grouping patterns, anti-joins, NULL edge cases
+  - 14 System design — LLM app architecture (latency, batching, caching)
+  - 6 Light reading — GRAID (skim method + harmful content detection angle)
+  - 21 Deep dive — Your LLM-as-a-Judge work (refresh contributions + gaps)
+  - 10 RAG — Failure modes, retrieval quality, chunking, grounding reliability
+  - 7 Light reading — DynaGuard (skim dynamic policy enforcement ideas)
+  - 27 Narrative building — STAR stories (cross-team collab, scaling systems)
+  - 12 Light reading — Cross-Modal Error Detection (skim high-level idea)
+  - Doctorate Degree [t/🤝interviews.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%9Dinterviews.md)
+  - Dropbox [t/🤝interviews.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%9Dinterviews.md)
+  - Concurrency Interview Prep [t/🤝interviews.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%9Dinterviews.md)
+Project '🌟bucketlist' has 15 tasks.
+  - Running a Marathon [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Becoming a model [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Groupon [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Sports: Marathon [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Art: Making Music [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Sports: tennis [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Glider [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Helicopter [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Horse Ride [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Going to most anticipated sports events [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Going to most popular concerts [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Going to different music festivals [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Trying different beer [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Trying different wines [t/🌟bucketlist.md](obsidian://open?vault=wiki&file=t/%F0%9F%8C%9Fbucketlist.md)
+  - Timeuler ([https://early.app/pricing/](https://early.app/pricing/))
+Project '💪confidence' has 10 tasks.
+  - Stare into people's eyes [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Visit photogenic places [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Take photos of good food [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Compose Music / Record music [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Self-Awareness & Emotional Intelligence [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Don't allow disrespect [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - experience == attractiveness [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Break into Song [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Say something Random [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+  - Break out into dance in a middle of nowhere [t/💪confidence.md](obsidian://open?vault=wiki&file=t/%F0%9F%92%AAconfidence.md)
+Project '🤹entertaining' has 5 tasks.
+  - Playing guitar [t/🤹entertaining.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9entertaining.md)
+  - Google Watchlist [t/🤹entertaining.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9entertaining.md)
+  - Becoming interesting [t/🤹entertaining.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9entertaining.md)
+  - Cooking [t/🤹entertaining.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9entertaining.md)
+  - Being there for someone [t/🤹entertaining.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9entertaining.md)
+Project '😄fun' has 11 tasks.
+  - Sex or Touching [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Conquering/Controlling [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Understanding Deeper [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Helping Other people, counseling other people [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Becoming the hero of your story [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Shopping [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Taking nice photos [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Earning badges [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Filing Patent [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Removing noise from my life [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+  - Board Games (with people I know) [t/😄fun.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%84fun.md)
+Project '🤔philosophy' has 3 tasks.
+  - Plato & Artistotle [t/🤔philosophy.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%94philosophy.md)
+  - Nietze [t/🤔philosophy.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%94philosophy.md)
+  - Hume [t/🤔philosophy.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%94philosophy.md)
+Project '😞miserable' has 5 tasks.
+  - Talking with families or older people [t/😞miserable.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%9Emiserable.md)
+  - Looking at Social Media [t/😞miserable.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%9Emiserable.md)
+  - Churning [t/😞miserable.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%9Emiserable.md)
+  - Going to a shopping mall [t/😞miserable.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%9Emiserable.md)
+  - Wasting Time [t/😞miserable.md](obsidian://open?vault=wiki&file=t/%F0%9F%98%9Emiserable.md)
+Project '😱missing' has 0 tasks.
+Project '⚠unethical' has 3 tasks.
+  - Trying to date someone without the intention/possibility of marriage [t/⚠unethical.md](obsidian://open?vault=wiki&file=t/%E2%9A%A0unethical.md)
+  - Filing to claims on working/placed items [t/⚠unethical.md](obsidian://open?vault=wiki&file=t/%E2%9A%A0unethical.md)
+  - Returning different products back [t/⚠unethical.md](obsidian://open?vault=wiki&file=t/%E2%9A%A0unethical.md)
+Project '📚books' has 34 tasks.
+  - Anything You Want by Dereke Sivers [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Algorithms [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Travels with Charley in Search of America [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing (The Life Changing Magic of Tidying Up) [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Unlimited Power by Tony Robbins [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Handman's Talk [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - A Single man [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - In Cold Blood by Truman Capote [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Wide Sargasso Sea by Jean Rhys [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - To the Lighthouse [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Sylvia Bell Jar by Slyvia Plath [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Picture of Dorian Gray by Oscar Wilde [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Emma by Jane Austin [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Tools of Titans [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Willpower Instinct [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Power of Habit [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Lying by Sam harris [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - How to Win Friends and Inflluence People by Dale Carnegie [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - 4-hour Workweek by Tim Ferris [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Deep Work by Cal Newport [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - 12 Rules for Life by Jordan Peterson [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Deep Work by Cal Newport [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The 7 Habits of Highly Effective People by Stephen R. Covey [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Power of Habit by Charles Duhigg [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Atomic Habits by James Clear [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Grit: The Power of Passion and Perseverance by Angela Duckworth [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Mindset: The New Psychology of Success by Carol S. Dweck [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Awaken the Giant Within by Tony Robbins [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - How to Win Friends and Influence People by Dale Carnegie [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - You Are a Badass by Jen Sincero [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The 7 Habits of Highly Effective People by Stephen R. Covey [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Think and Grow Rich by Napoleon Hill [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - The Power of Habit by Charles Duhigg [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+  - Atomic Habits by James Clear [t/📚books.md](obsidian://open?vault=wiki&file=t/%F0%9F%93%9Abooks.md)
+Project '🧹cleaning' has 4 tasks.
+  - Desk Drawers [t/🧹cleaning.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B9cleaning.md)
+  - Cleaning supplies [t/🧹cleaning.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B9cleaning.md)
+  - Winter cloths [t/🧹cleaning.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B9cleaning.md)
+  - Kitchen supplies [t/🧹cleaning.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B9cleaning.md)
+Project '🎓education' has 40 tasks.
+  - Reading books on management [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - [Free online course by Andrew Ng x Pinecone: Building Apps with Vector DBs](https://mail.google.com/mail/u/0/#all/18d60b5eb84e3623) [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Finance [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Setup Pycharm for DS [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - System Design [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Social Media [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Influence [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Business [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Communication [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Personal Branding [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Chinese [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Chinese [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - LeetCode the Right way [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Machine Learning [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Career and Management [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Management [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Boundaries [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Minimalism [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Interview Skills [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Soft Skills [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Goal & Purpose [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Social Skills [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Attractiveness [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Travel - Digital Nomad [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - https://overemployed.com/ [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Vocal Lesson [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Guitar Lesson [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Mastering the Art of Programming in Python 3 [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Python Concurrency for Senior Engineering Interviews [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - MIT Distributed Systems (Golang) [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Functional Programming (Scala) [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Statistical Modleing [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - SQL [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Java [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Golang [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Reinforcement Learning Specializaiton [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Tax [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Simulation Models for Decision Making [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Java differences [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+  - Slack Keyboard Shortcut [t/🎓education.md](obsidian://open?vault=wiki&file=t/%F0%9F%8E%93education.md)
+Project '🔁habits' has 47 tasks.
+  - Getting a braces or water tank by my bedsid [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - How to sleep early and not become depressed and stay up late [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Change cloth [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Preparing a breakfast by my bedside [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Branstorming every morning [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Caffeine and amphetamine stomachache and feeling unwell [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Turn on music [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Jumping jacks, squats, and 90-90 [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Avoid premature optimization (or ignore the urge to) [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Shred [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Eat with variety and small portions, and antioxidants [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Drink water + Move fan + Run [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - worrying => friendship [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Move the Fan back + Turn on water + Undress [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - How can I still  make people feel heard when switching a topic [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Setup iPad and put on computer glasses [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Lighting stretching [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - When you’re not sure ask [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Drink Coffee [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Shower + Towel + Lotion + Brush Teeth [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Speech practice with Yoodli.ai [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Quiet time [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Pray [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Stoic [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Art [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Clean up [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Ordering food [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Guitar/Singing [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Morning Routine [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Prep [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Dancing [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Eat Apricot [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Workout [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Water, Snooze, Wash face, Shave, Lotion [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Month hygiene [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Quarter hygiene [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Clipping toenails [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Streaks habits morning and night setup [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Haircut [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Open up the curtain, stretch, dress up [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Washing car (check rain first) [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Night Routine [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Streak [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Eat + Takes supplements [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Sunsceen + Sunglasses [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - badge, Phone, wallet, Airpod [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+  - Make bed + Clean [t/🔁habits.md](obsidian://open?vault=wiki&file=t/%F0%9F%94%81habits.md)
+Project '🧘🏻health' has 0 tasks.
+Project '🗃️Organize' has 0 tasks.
+Project '⏳productivity' has 7 tasks.
+  -  [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Not to do (80% of problems and unhappiness) [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Playing ambient music all the time => distracting, room motion trigger? [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Markdown plugin for OneNote [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Block google image [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Mental Habits [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+  - Focus (80% of desired outcome and happiness) [t/⏳productivity.md](obsidian://open?vault=wiki&file=t/%E2%8F%B3productivity.md)
+Project '🗣phrase' has 0 tasks.
+Project '🛠repair' has 0 tasks.
+Project '🤹🏻skills' has 21 tasks.
+  - Interview S:8 T:4 E:2 I:9 M:9 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Seminary Master in Divinity S:8 T:9 E:6 I:9 M:3 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Golf S:4 T:6 E:5 I:7 M:5 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Guitar S:7 T:6 E:3 I:7 M:2 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Tennis S:5 T:5 E:7 I:2 M:1 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Marathon S:3 T:6 E:5 I:3 M:2 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Jiujitsu S:1 T:5 E:6 I:2 M:1 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Photography S:1 T:3 E:3 I:6 M:1 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Georgia Tech Master's Degree S:7 T:7 E:3 I:9 M:8 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Tuesday Bible Study S:1 T:x E:3 I:2 M:1 [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Test Result and cognitive improvements [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Spatial Working Memory [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Memory skill: https://elevateapp.com/skills/memory-skills [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Mnemonics [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - drawing [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - Photography [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - rubik's cube [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - geometric games [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - [Inhibition Response](https://mrmizrahi.blog/2018/02/14/improve-response-inhibition/) [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - DDR [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+  - guitar hero [t/🤹🏻skills.md](obsidian://open?vault=wiki&file=t/%F0%9F%A4%B9%F0%9F%8F%BBskills.md)
+Project '♊.Obsidian' has 3 tasks.
+  - delay loading Youvision [t/♊Obsidian.md](obsidian://open?vault=wiki&file=t/%E2%99%8AObsidian.md)
+  - how to create a new note with the current directory with a date [t/♊Obsidian.md](obsidian://open?vault=wiki&file=t/%E2%99%8AObsidian.md)
+  - Open specific obsidian file using shortcut [t/♊Obsidian.md](obsidian://open?vault=wiki&file=t/%E2%99%8AObsidian.md)
+Project '🟧Home Depot' has 0 tasks.
+Project '🛒shopping' has 20 tasks.
+  - Baby Brezza Formula Pro [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - $350 TheStackSystem [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Full size bed side panel lift [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Security Camera [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - TV [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Keyboard for Yebin [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Treadmill [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Digital Pen [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Toys [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Common Projects Achilles Low 42 [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - CREATININE [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Warm running shoes [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Sunglasses [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Yeti icebox for coffee cups [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Boxy looking reusable bag [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - PowerPort Atom PD 4 [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Smule [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - UXBRIDGE VOICE WITH AMAZON ALEXA WHITE [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - 30m Charles Tyrwhitt shirts ~shopping [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+  - Ikea [t/🛒shopping.md](obsidian://open?vault=wiki&file=t/%F0%9F%9B%92shopping.md)
+Project '📈investment' has 0 tasks.
+Project '🧱credit' has 6 tasks.
+  - $200.45 Commute Card [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)
+  - 1h $3000 Carrollton emergency disaster aid [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)
+  - 15m FEMA [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)
+  - $100 15m Email GM financials [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)
+  - Sunglasses [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)
+  - Delaware Corporation Tax ($450 to $659) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md) [t/🧱credit.md](obsidian://open?vault=wiki&file=t/%F0%9F%A7%B1credit.md)

@@ -122,6 +122,7 @@ Once connected, you'll see the TickTick MCP server tools available in Claude, in
 | `get_project` | Get details about a specific project | `project_id` |
 | `get_project_tasks` | List all tasks in a project | `project_id` |
 | `get_task` | Get details about a specific task | `project_id`, `task_id` |
+| `get_pinned_tasks` | List all active pinned tasks | None |
 | `create_task` | Create a new task | `title`, `project_id`, `content` (optional), `start_date` (optional), `due_date` (optional), `priority` (optional) |
 | `update_task` | Update an existing task | `task_id`, `project_id`, `title` (optional), `content` (optional), `start_date` (optional), `due_date` (optional), `priority` (optional) |
 | `complete_task` | Mark a task as complete | `project_id`, `task_id` |

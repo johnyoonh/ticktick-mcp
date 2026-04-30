@@ -27,6 +27,7 @@ def check_auth_setup() -> bool:
 def main():
     """Entry point for the CLI."""
     parser = argparse.ArgumentParser(description="TickTick MCP Server")
+    parser.set_defaults(debug=False, transport="stdio")
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
     
     # 'run' command for running the server
@@ -48,10 +49,10 @@ def main():
     
     args = parser.parse_args()
     
-    # If no command specified, default to 'run'
+    # If no command is specified, default to running the MCP server.
     if not args.command:
         args.command = "run"
-    
+
     # For the run command, check if auth is set up
     if args.command == "run" and not check_auth_setup():
         print("""

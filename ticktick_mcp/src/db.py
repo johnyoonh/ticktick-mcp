@@ -79,7 +79,7 @@ class TickTickDB:
         
         with self.conn:
             # Process Projects
-            project_profiles = batch_data.get("projectProfiles", [])
+            project_profiles = batch_data.get("projectProfiles") or []
             for p in project_profiles:
                 p_id = p.get("id")
                 is_closed = 1 if p.get("closed") else 0
@@ -89,8 +89,8 @@ class TickTickDB:
                 )
 
             # Process Tasks
-            sync_task_bean = batch_data.get("syncTaskBean", {})
-            tasks_update = sync_task_bean.get("update", [])
+            sync_task_bean = batch_data.get("syncTaskBean") or {}
+            tasks_update = sync_task_bean.get("update") or []
             for t in tasks_update:
                 t_id = t.get("id")
                 status = t.get("status", 0)
@@ -104,7 +104,7 @@ class TickTickDB:
                 )
             
             # The API might return explicit deletes in `delete` arrays, but usually `deleted: 1` flag is used in `update`.
-            tasks_delete = sync_task_bean.get("delete", [])
+            tasks_delete = sync_task_bean.get("delete") or []
             for del_item in tasks_delete:
                 t_id = del_item.get("taskId")
                 if t_id:
@@ -138,3 +138,17 @@ class TickTickDB:
             (f"%{title_substring}%",)
         )
         return [json.loads(row["data_json"]) for row in cur.fetchall()]
+
+    def get_pinned_tasks(self):
+        cur = self.conn.execute("SELECT data_json FROM tasks WHERE is_deleted = 0")
+        tasks = [json.loads(row["data_json"]) for row in cur.fetchall()]
+        pinned_tasks = [
+            task
+            for task in tasks
+            if task.get("pinnedTime") and task.get("status") != 2
+        ]
+        return sorted(
+            pinned_tasks,
+            key=lambda task: task.get("pinnedTime") or "",
+            reverse=True,
+        )
