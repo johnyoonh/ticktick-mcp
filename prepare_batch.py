@@ -16,7 +16,7 @@ def clean_title(title):
 def assign_inbox_project(title):
     t = title.lower()
     if any(kw in t for kw in ["clean", "wash", "sweep", "trash", "organize", "vacuum", "laundry"]): return "Cleaning"
-    elif any(kw in t for kw in ["code", "script", "mcp", "api", "prompt", "ai", "build", "automation", "server", "python", "lucidchart"]): return "Automation"
+    elif any(kw in t for kw in ["code", "script", "mcp", "api", "prompt", "ai", "build", "automation", "server", "python", "lucidchart"]): return "⚙️ Automation"
     elif any(kw in t for kw in ["read", "book", "study", "class", "course", "phd", "theology", "bible", "seminary", "missiology"]): return "Seminary (Education)"
     else: return "Home"
 
@@ -67,6 +67,7 @@ def main():
         else:
             project_name = project_map.get(pid, "Unknown")
             if "education" in project_name.lower(): project_name = "Seminary (Education)"
+            if project_name.lower() == "automation" or project_name.lower() == "⚙️automation": project_name = "⚙️ Automation"
             is_active_project = pid in active_project_ids
 
         is_pinned = bool(task.get("pinnedTime") or task.get("pin") or task.get("isPinned") or task.get("pinned"))
