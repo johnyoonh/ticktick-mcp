@@ -15,9 +15,9 @@ def clean_title(title):
 
 def assign_inbox_project(title):
     t = title.lower()
-    if any(kw in t for kw in ["clean", "wash", "sweep", "trash", "organize", "vacuum", "laundry"]): return "Cleaning"
-    elif any(kw in t for kw in ["code", "script", "mcp", "api", "prompt", "ai", "build", "automation", "server", "python", "lucidchart"]): return "⚙️ Automation"
-    elif any(kw in t for kw in ["read", "book", "study", "class", "course", "phd", "theology", "bible", "seminary", "missiology"]): return "Seminary (Education)"
+    if any(kw in t for kw in ["clean", "wash", "sweep", "trash", "organize", "vacuum", "laundry", "belongings", "inventory", "declutter"]): return "Cleaning"
+    elif any(kw in t for kw in ["code", "script", "mcp", "api", "prompt", "ai", "build", "automation", "server", "python", "lucidchart", "research", "kubernetes", "github", "startup", "deployment", "cursor", "software", "mapreduce", "tech", "keyboard"]): return "⚙️ Automation"
+    elif any(kw in t for kw in ["read", "book", "study", "class", "course", "phd", "theology", "bible", "seminary", "missiology", "review", "log"]): return "Theology"
     else: return "Home"
 
 def get_migrated_ids():
@@ -65,11 +65,18 @@ def main():
             project_name = assign_inbox_project(title)
             is_active_project = True
         else:
-            project_name = project_map.get(pid, "Unknown")
-            if "education" in project_name.lower(): project_name = "Seminary (Education)"
-            if project_name.lower() == "automation" or project_name.lower() == "⚙️automation": project_name = "⚙️ Automation"
-            is_active_project = pid in active_project_ids
-
+            orig = project_map.get(pid, "Unknown").lower()
+            if any(kw in orig for kw in ["clean", "organize", "minimalism", "repair", "house"]):
+                project_name = "Cleaning"
+            elif any(kw in orig for kw in ["education", "seminary", "sermon", "books", "philosophy"]):
+                project_name = "Theology"
+            elif any(kw in orig for kw in ["automation", "project", "obsidian", "skills", "research", "algorithms", "code", "tech"]):
+                project_name = "⚙️ Automation"
+            else:
+                # Default other projects (like finance, costco, home, etc.) to Home
+                project_name = "Home"
+            is_active_project = True
+            
         is_pinned = bool(task.get("pinnedTime") or task.get("pin") or task.get("isPinned") or task.get("pinned"))
         tt_priority = task.get("priority", 0)
         
